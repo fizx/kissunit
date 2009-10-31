@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script src="kiss.js"></script>
+    <script>
+      var tests = new KISSUnit({
+        setUp: function() {
+          tests.foo = "bar";
+        },
+        testSomething: function(){
+          assertTrue(true);
+          assertEqual("bar", tests.foo);
+        },
+        testShouldBeRed: function(){
+          var a = something_undefined1; 
+        },
+        testShouldAlsoBeRed: function(){
+          assertTrue(false);
+        }      
+      });
+    </script>
+  </head>
+  <body>
+    <h1>kiss.js</h1>
+    <h2>Really simple javascript unit tests.</h2>
+    <p>Look at the source.</p>
+    <p><input type="button" value="Run self tests!" onclick="tests.run()">
+  </body>
+</html>
